@@ -54,7 +54,7 @@ const NewUserOverlay = ({ onClose }) => {
             </div>
 
         <div className='links' style={{ display: 'flex', alignItems: 'center', justifyContent:"center" }}>
-        <a style={{ textDecoration: 'none', marginRight: '5px', color:"#E02683", letterSpacing:"1px", fontSize:'1.2rem' }} href='www.instagram.com/hisham_ahmedx'>Instagram</a>
+        <a style={{ textDecoration: 'none', marginRight: '5px', color:"#E02683", letterSpacing:"1px", fontSize:'1.2rem' }} href='https://instagram.com/hisham_ahmedx?igshid=NzZlODBkYWE4Ng=='>Instagram</a>
         <Lottie animationData={animationDataInstagram} style={{ height: "30px", width: "30px", margin: "0" }} />
         </div>
 
