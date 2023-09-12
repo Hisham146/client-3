@@ -11,13 +11,18 @@ export default function Services() {
   const getuser = getCurrentUser();
   const defaultfirstname = getuser.firstname;
   const defaultlastname = getuser.lastname;
-  const defaultEmail = getuser.email
+  const defaultEmail = getuser.email;
+  var defaultPhone = ""
+  if(getuser?.phone !== null || getuser?.phone !== ""){
+    defaultPhone = getuser.phone;
+  }
+ 
   
   const initialValues = {
     firstname: defaultfirstname,
     lastname: defaultlastname,
     email: defaultEmail,
-    phone: "",
+    phone: defaultPhone ? defaultPhone : "",
     city: "",
     vehiclemake: "",
     vehiclemodel: "",
@@ -81,7 +86,7 @@ export default function Services() {
     firstname: defaultfirstname,
     lastname: defaultlastname,
     email: defaultEmail,
-    phone: "",
+    phone: defaultPhone ? defaultPhone : "",
     city: "",
     vehiclemake: "",
     vehiclemodel: "",
