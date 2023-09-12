@@ -55,6 +55,9 @@ const User = () => {
       }
       if (response.data.updatedUser) {
         setUpdated("Your Profile is Updated*"); // Set the message from the response
+       localStorage.setItem("curretUser", null);
+       localStorage.setItem("currentUser", JSON.stringify(response.data.updatedUser));
+
       }
       const message = "*Your Profile is updated*";
        window.confirm(message);
