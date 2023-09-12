@@ -19,12 +19,17 @@ export default function Createadform() {
   const [Posting, setPosting] = useState(false);
   const coverInputRef = useRef(null);
   const getuser = getCurrentUser();
-  console.log("getuser", getuser);
+
   const defaultfirstname = getuser.firstname;
   const defaultlastname = getuser.lastname;
+  var defaultPhone = ""
+  if(getuser?.phone !== null || getuser?.phone !== ""){
+    defaultPhone = getuser.phone;
+  }
+
+ 
   const id = getuser?._id
 
-console.log("id", id);
   const [uploadClicked, setUploadClicked] = useState(false);
 
   useEffect(() => {
@@ -81,7 +86,7 @@ console.log("id", id);
   const initialValues = {
     title: "",
     contact: "",
-    price: "",
+    price: defaultPhone ? defaultPhone : "",
     location:"",
     desc: "",
     vehiclemake: "",
@@ -102,7 +107,7 @@ console.log("id", id);
   const [formData, setFormData] = useState({
     title: "",
     contact: "",
-    price: "",
+    price: defaultPhone ? defaultPhone : "",
     location:"",
     desc: "",
     cover: "",
@@ -190,7 +195,6 @@ console.log("id", id);
       
       // Update the formData.images array when new images are selected
       const imageUrls = Array.from(selectedFiles).map((file) => URL.createObjectURL(file));
-      console.log("imageUrls", imageUrls);
       setFormData({
         ...formData,
         images: imageUrls,
