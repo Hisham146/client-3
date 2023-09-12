@@ -49,7 +49,7 @@ const [noData, setNoData]= useState("")
     queryKey: ["ads"],
     queryFn: () =>
       newRequest.get(`/posts?search=${searchInput}&min=${minRef.current.value}&max=${maxRef.current.value}&vehiclemake=${vehicleMakeRef.current.value}&location=${cityRef.current.value}&vehiclemodel=${vehicleModelRef.current.value}`).then((res) => {
-        console.log('Response status code:', res.status);
+        
         if (res.status === 204) {
           // Handle the "No results found" case
           console.log('No results found');
