@@ -85,8 +85,8 @@ export default function Createadform() {
 
   const initialValues = {
     title: "",
-    contact: "",
-    price: defaultPhone ? defaultPhone : "",
+    contact: defaultPhone ? defaultPhone : "",
+    price: "",
     location:"",
     desc: "",
     vehiclemake: "",
@@ -106,8 +106,8 @@ export default function Createadform() {
 
   const [formData, setFormData] = useState({
     title: "",
-    contact: "",
-    price: defaultPhone ? defaultPhone : "",
+    contact: defaultPhone ? defaultPhone : "",
+    price: "" ,
     location:"",
     desc: "",
     cover: "",
