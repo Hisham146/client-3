@@ -17,7 +17,7 @@ const MyAds = () => {
       return res.data;
     }),    
   });
-console.log("data", data);
+
   
   const handleDelete = async (id) => {
         try{
