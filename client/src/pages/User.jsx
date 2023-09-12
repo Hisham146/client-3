@@ -114,7 +114,7 @@ const User = () => {
                       <label htmlFor="firstname" className="form-label">
                         First Name
                       </label>
-                      <Field type="text" className="form-control" name="firstname" id="firstname" placeholder="First Name" />
+                      <Field type="text" className="form-control" name="firstname" id="firstname" placeholder="First Name" required />
                       <ErrorMessage name="firstname" component="div" className="form-error" style={{ color: 'red' }}/>
                     </div>
 
@@ -122,7 +122,7 @@ const User = () => {
                       <label htmlFor="lastname" className="form-label">
                         Last Name
                       </label>
-                      <Field type="text" className="form-control" name="lastname" id="lastname" placeholder="Last Name" />
+                      <Field type="text" className="form-control" name="lastname" id="lastname" placeholder="Last Name" required />
                       <ErrorMessage name="lastname" component="div" className="form-error" style={{ color: 'red' }}/>
                     </div>
 
@@ -130,7 +130,7 @@ const User = () => {
                       <label htmlFor="email" className="form-label">
                         Email
                       </label>
-                      <Field type="email" className="form-control" name="email" id="email" placeholder="Email" />
+                      <Field type="email" className="form-control" name="email" id="email" placeholder="Email"  required/>
                       <ErrorMessage name="email" component="div" className="form-error" style={{ color: 'red' }} />
                       {message && (
                        <p className='message' style={{color: "green", fontWeight:"600"}}>{message}</p>
