@@ -72,6 +72,7 @@ const [noData, setNoData]= useState("")
   
  if(data?.count){
    totalSearchedAds = data.count;
+    totalSearchedAds.toLocaleString();
  }
  
   data = data?.searchedQuery ? data.searchedQuery : data;
@@ -446,7 +447,7 @@ style={{
         }}>
         {filter ? (
             <>
-              <FaTimes style={{ marginRight:'2px'}}/>Remove Filter
+              <FaTimes style={{ marginRight:'2px', color: 'red', paddingBottom:'2px'}}/>Remove Filter
             </>
           ) : null}
         </div>
