@@ -47,6 +47,7 @@ export default function Signin({ onLogin }) {
         navigate("/"); 
       }
     } catch (err) {
+       setSubmitButtonDisabled(false);
       setError(err.response.data);
     }
   };
