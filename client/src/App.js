@@ -1,4 +1,3 @@
-
 import './App.css';
 import { BrowserRouter , Route, Routes, Navigate } from 'react-router-dom';
 import Home from './pages/Home.jsx'
@@ -29,6 +28,7 @@ import {
   QueryClient,
   QueryClientProvider,
 } from "react-query";
+import devtools from 'devtools-detect';
 
 const queryClient = new QueryClient();
 
@@ -48,6 +48,28 @@ const App =()=> {
   const [showNewUserOverlay, setShowNewUserOverlay] = useState(false);
 
   useEffect(() => {
+    // Disable right-click
+    document.addEventListener('contextmenu', (e) => e.preventDefault());
+
+    // Disable F12, Ctrl+Shift+I, Ctrl+Shift+J, Ctrl+U, Ctrl+Shift+C
+    document.addEventListener('keydown', (e) => {
+      if (
+        e.key === 'F12' ||
+        (e.ctrlKey && e.shiftKey && e.key === 'I') ||
+        (e.ctrlKey && e.shiftKey && e.key === 'J') ||
+        (e.ctrlKey && e.key === 'U') ||
+        (e.ctrlKey && e.shiftKey && e.key === 'C')
+      ) {
+        e.preventDefault();
+      }
+    });
+
+    // Detect if developer tools are open
+    if (devtools.isOpen) {
+      alert('Developer tools are open, which is not allowed!');
+      window.close();  // or any other action you prefer
+    }
+
     const hasSeenOverlay = localStorage.getItem('hasSeenOverlay');
     if (!hasSeenOverlay) {
       setShowNewUserOverlay(true);
