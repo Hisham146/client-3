@@ -14,7 +14,7 @@ const PasswordReset = () => {
 	const [msg, setMsg] = useState("");
 	const [error, setError] = useState("");
 	const param = useParams();
-	const url = `https://shampy.cyclic.cloud/api//auth/${param.id}/${param.token}`;
+	const url = `https://shampyapi-production.up.railway.app/api/auth/${param.id}/${param.token}`;
 
     const initialValues = {
     newPassword: '',
