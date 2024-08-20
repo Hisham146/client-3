@@ -11,7 +11,7 @@ const EmailVerify = () => {
 	useEffect(() => {
 	  const verifyEmailUrl = async () => {
 		try {
-		  const url = `https://shampyapi.onrender.com/api/auth/${param.id}/verify/${param.token}`; // Use relative path
+		  const url = `https://shampyapi-production.up.railway.app/api/auth/${param.id}/verify/${param.token}`; // Use relative path
 		  console.log(url);
 		  await newRequest.get(url);
   
