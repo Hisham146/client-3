@@ -65,9 +65,7 @@ const App = () => {
     
 
     // Run the check in intervals to avoid affecting normal browsing
-    const interval = setInterval(() => {
-      checkDevTools();
-    }, 1000);
+    
 
     // Clean up interval on component unmount
     return () => clearInterval(interval);
