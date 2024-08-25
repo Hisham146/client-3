@@ -62,12 +62,7 @@ const App = () => {
     });
 
     // Detect if developer tools are open
-    const checkDevTools = () => {
-      if (devtools.isOpen) {
-        alert('Developer tools are open, which is not allowed!');
-        window.close();  // or any other action you prefer
-      }
-    };
+    
 
     // Run the check in intervals to avoid affecting normal browsing
     const interval = setInterval(() => {
