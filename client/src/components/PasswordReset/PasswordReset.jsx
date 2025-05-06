@@ -16,6 +16,7 @@ const PasswordReset = () => {
 	const param = useParams();
 	const url = `https://shampyapi.onrender.com/api/auth/${param.id}/${param.token}`;
 
+	
     const initialValues = {
     newPassword: '',
     confirmPassword: '',
